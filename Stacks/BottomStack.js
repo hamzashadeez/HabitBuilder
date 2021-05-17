@@ -6,6 +6,7 @@ import Home from "../Screens/Home";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import AddHabit from "../Screens/AddHabit";
 import { colors } from "../config/colors";
+import HomeStack from "./HomeStack";
 
 const Tab = createBottomTabNavigator();
 const tabBarOptions = {
@@ -21,7 +22,7 @@ const tabBarOptions = {
 const BottomStack = () => {
   return (
     <Tab.Navigator tabBarOptions={tabBarOptions}>
-      <Tab.Screen name="Home" component={Home} options={{
+      <Tab.Screen name="Home" component={HomeStack} options={{
           tabBarLabel: 'Dashboard',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="view-dashboard" color={color} size={size} />

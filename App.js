@@ -3,11 +3,8 @@ import React, { useEffect } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { colors } from "./config/colors";
-// import AppLoading from 'expo-app-loading';
 import { useFonts } from "expo-font";
 import BottomStack from "./Stacks/BottomStack";
-
-import Home from "./Screens/Home";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
