@@ -82,6 +82,7 @@ const AddHabit = ({ navigation }) => {
             style={styles.input}
             placeholder="Habit Name e.g Workout, Reading."
             value={habitName}
+            placeholderTextColor='#444'
             onChange={(e) => setHabitName(e.nativeEvent.text)}
           />
           <Text
@@ -174,7 +175,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    marginTop: 20,
+    marginTop: 10,
   },
   ModalBody: {
     backgroundColor: colors.gray,
@@ -187,8 +188,6 @@ const styles = StyleSheet.create({
     padding: 10,
     marginTop: 8,
     marginBottom: 15,
-    outline: "none",
-    border: "none",
     backgroundColor: colors.primary,
     color: colors.secondary,
     fontFamily: "Lato",

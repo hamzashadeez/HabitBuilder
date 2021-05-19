@@ -3,9 +3,10 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import { colors } from '../config/colors'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-const Habits = ({name, time, icon, day}) => {
+const Habits = ({name, time, icon, day, navigation}) => {
+    const data = {name, time, icon, day}
     return (
-        <TouchableOpacity style={styles.addHabit}>
+        <TouchableOpacity style={styles.addHabit} onPress={()=>navigation.navigate('HabitDetail', {data:data})}>
             <MaterialCommunityIcons name={icon} color={colors.secondary} size={50} />            
             <Text style={styles.name}>{name} For {time}</Text>
             <View style={styles.day}>

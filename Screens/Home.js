@@ -53,6 +53,7 @@ const Home = ({navigation}) => {
             name={d.name}
             time={d.time}
             day={d.day}
+            navigation={navigation}
           />
         ))}
       </ScrollView>

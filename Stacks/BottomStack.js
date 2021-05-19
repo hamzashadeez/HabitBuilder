@@ -2,11 +2,12 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../Screens/Home";
-// import Ionicons from '@expo/vector-icons/Ionicons'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import AddHabit from "../Screens/AddHabit";
 import { colors } from "../config/colors";
 import HomeStack from "./HomeStack";
+import Profile from "../Screens/Profile";
+import Forum from "../Screens/Forum";
 
 const Tab = createBottomTabNavigator();
 const tabBarOptions = {
@@ -29,14 +30,14 @@ const BottomStack = () => {
           ),
           tabBarBadge: 3,
         }}/>
-      <Tab.Screen name="Profile" component={AddHabit} options={{
+      <Tab.Screen name="Profile" component={Profile} options={{
           tabBarLabel: 'Profile',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="account-circle" color={color} size={size} />
           ),
           tabBarBadge: 2,
         }}/>
-      <Tab.Screen name="Forum" component={AddHabit} options={{
+      <Tab.Screen name="Forum" component={Forum} options={{
           tabBarLabel: 'Forum',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="forum" color={color} size={size} />
